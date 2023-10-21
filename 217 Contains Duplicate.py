@@ -4,11 +4,11 @@ class Solution(object):
         :type nums: List[int]
         :rtype: bool
         """
-        seen = {}
-        for num in nums:
-            if num in seen:
+        seen = {}       #creating a dict to store values that have been seen
+        for num in nums:    #iterating through the nums array  
+            if num in seen: #if the number we are checking is in our dict we return true
                 return True
-            else:
+            else:           #else we add it to our dict
                 seen[num] = 1
-        return False
+        return False        #if we finish iterating through the loop, return false
         
